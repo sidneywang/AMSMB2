@@ -270,6 +270,7 @@ extension OutputStream {
     }
 }
 
+@available(macOS 10.15, *)
 func asyncHandler(_ continuation: CheckedContinuation<Void, any Error>) -> @Sendable (_ error: (any Error)?) -> Void {
     { error in
         if let error = error {
@@ -280,6 +281,7 @@ func asyncHandler(_ continuation: CheckedContinuation<Void, any Error>) -> @Send
     }
 }
 
+@available(macOS 10.15, *)
 func asyncHandler<T>(_ continuation: CheckedContinuation<T, any Error>) -> @Sendable (Result<T, any Error>) -> Void {
     { result in
         continuation.resume(with: result)

@@ -10,9 +10,11 @@
 import Foundation
 import SMB2
 
+@available(macOS 10.15, *)
 @available(*, deprecated, renamed: "SMB2Manager")
 public typealias AMSMB2 = SMB2Manager
 
+@available(macOS 10.15, *)
 /// Implements SMB2 File operations.
 @objc(AMSMB2Manager)
 public class SMB2Manager: NSObject, NSSecureCoding, Codable, NSCopying, CustomReflectable, @unchecked Sendable {
@@ -1375,6 +1377,7 @@ public class SMB2Manager: NSObject, NSSecureCoding, Codable, NSCopying, CustomRe
     }
 }
 
+@available(macOS 10.15, *)
 extension SMB2Manager {
     private func queue(_ closure: @Sendable @escaping () -> Void) {
         operationLock.lock()
@@ -1468,6 +1471,7 @@ extension SMB2Manager {
     }
 }
 
+@available(macOS 10.15, *)
 extension SMB2Manager {
     private func listDirectory(context: SMB2Context, path: String, recursive: Bool) throws
         -> [[URLResourceKey: Any]]

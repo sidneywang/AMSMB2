@@ -9,6 +9,7 @@
 
 import Foundation
 
+@available(macOS 10.15, *)
 extension SMB2Manager {
     /**
      Connects to a share.
@@ -238,6 +239,7 @@ extension SMB2Manager {
     }
 }
 
+@available(macOS 10.15, *)
 extension SMB2Manager {
     private func convert<T>(_ resultCompletion: @Sendable @escaping (T?, (any Error)?) -> Void) -> (
         @Sendable (Result<T, any Error>) -> Void

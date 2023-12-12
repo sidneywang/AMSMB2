@@ -5,7 +5,7 @@ let package = Package(
     name: "AMSMB2",
     platforms: [
         .iOS(.v13),
-        .macOS(.v10_15),
+        .macOS(.v10_13),
         .macCatalyst(.v13),
         .tvOS(.v14),
         .watchOS(.v6),
